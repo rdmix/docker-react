@@ -49,6 +49,8 @@ const config = configFactory('production');
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
 const { checkBrowsers } = require('react-dev-utils/browsersHelper');
+
+let time = 
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
     // First, read the current file sizes in build directory.
@@ -141,7 +143,7 @@ function build(previousFileSizes) {
     );
     console.log();
   }
-
+  
   console.log('Creating an optimized production build...');
 
   const compiler = webpack(config);
